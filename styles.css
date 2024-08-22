@@ -1,8 +1,24 @@
+html {
+    background-image: url(http://picsum.photos/1600/?blur=10);
+    /* height: 100vh; */
+}
+
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    /* height: 100%; */
+}
+
+main {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 155px); /* Adjusts for header and footer height */
+    padding: 5px;
 }
 
 header {
@@ -14,7 +30,7 @@ header {
 
 nav ul {
     list-style-type: none;
-    margin: 0;
+    margin: 5px;
     padding: 0;
     text-align: center;
 }
@@ -30,7 +46,8 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 10px;
+    padding: 2px;
+    margin: 10px;
 }
 
 nav ul li a:hover {
@@ -64,36 +81,33 @@ nav ul li a:hover {
     display: block;
 }
 
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 120px); /* Adjusts for header and footer height */
-    padding: 5px;
-}
-
 .content-container {
-    max-width: 800px;
+    background-color: #fcf9f5ce;
+    max-width: 1200px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     text-align: center;
 }
 
 footer {
     background-color: #333;
+    position: bottom;
+    bottom: 0;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-    position: relative;
-    bottom: 0;
+    padding: 10px;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 #pdf-render {
     border: 1px solid #ccc;
-    max-width: 100%;
+    max-width: 1000px;
     width: 100%;
     padding: 0;
 }
